@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from store.routers import api_router
 
 from store.core.config import settings
 
@@ -15,3 +16,4 @@ class App(FastAPI):
 
 
 app = App()
+app.include_router(api_router)
